@@ -34,6 +34,15 @@ jobs:
             - name: Fetch plugin
               run: wget https://raw.githubusercontent.com/VendroidEnhanced/plugin/main/index.ts
 
+            - name: pwd
+              run: pwd
+
+            - name: Make plugin dir
+              run: mkdir -p src/plugins/vendroidEnhancements
+            
+            - name: Copy plugin
+              run: cp index.ts src/plugins/vendroidEnhancements/
+
             - name: Build web
               run: pnpm buildWeb --standalone
 
