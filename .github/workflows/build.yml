@@ -34,6 +34,12 @@ jobs:
             - name: Fetch plugin
               run: wget https://raw.githubusercontent.com/VendroidEnhanced/plugin/main/index.ts
 
+            - name: Fetch settings component
+              run: wget https://raw.githubusercontent.com/VendroidEnhanced/plugin/main/settings.tsx
+
+            - name: Fetch settings plugin
+              run: wget https://raw.githubusercontent.com/VendroidEnhanced/plugin/main/VendroidTab.tsx
+
             - name: pwd
               run: pwd
 
@@ -42,6 +48,12 @@ jobs:
             
             - name: Copy plugin
               run: cp index.ts src/plugins/vendroidEnhancements/
+
+            - name: Copy component
+              run: cp VendroidTab.tsx src/components/VencordSettings/
+
+            - name: Copy settings
+              run: cp settings.tsx src/plugins/_core/
 
             - name: Build web
               run: pnpm buildWeb --standalone
