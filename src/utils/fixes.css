@@ -1,6 +1,0 @@
-/* Source: https://raw.githubusercontent.com/Vencord/Vesktop/main/src/renderer/fixes.css */
-/* Download Desktop button in guilds list */
-[class^=listItem_]:has([data-list-item-id=guildsnav___app-download-button]),
-[class^=listItem_]:has(+ [class^=listItem_] [data-list-item-id=guildsnav___app-download-button]) {
-    display: none;
-}
